@@ -1,0 +1,72 @@
+# Event sources - one URL per line, # comments allowed.
+# Tell Hermes "add <url> to the event scan" to grow this list.
+# NOTE: use curl with a browser User-Agent (Mozilla/5.0); madison.com rate-limits bots.
+
+# Curated weekly weekend roundup (updated Thursdays)
+https://www.eatdrinkmadison.com/blog/
+
+# Official tourism calendar - downtown filter
+https://www.visitmadison.com/downtown/events/
+
+# UW-Madison events calendar (per-day; substitute YYYY-MM-DD)
+https://today.wisc.edu/events/day/{DATE}
+
+# Allevents.in Madison (per-day; substitute YYYY-MM-DD)
+https://allevents.in/madison/{DATE}
+
+# Isthmus paper - weekly events roundup + festival calendars
+https://isthmus.com/category/isthmus/
+
+# The Brass Ring (pool hall/bar, 701 E Washington Ave, downtown) — weekly recurring events.
+# NOTE: JS-only SPA — curl returns an empty shell; render with the browser tool, do not curl.
+https://www.thebrassringmadison.com/events
+
+# The Sylvee (live music venue, 800 S Park St, Vilas) — full concert calendar.
+# NOTE: curl gets 403 (bot protection); render with the browser tool.
+https://thesylvee.com/calendar/
+
+# FPC family venues (same WordPress stack as The Sylvee — curl gets 403; render with browser tool):
+#   Majestic Theatre (115 King St)      https://majesticmadison.com/calendar/
+#   High Noon Saloon (701 E Washington) https://high-noon.com/calendar/   (upstairs from Brass Ring)
+#   Orpheum Theater (216 State St)      https://madisonorpheum.com/calendar/
+https://majesticmadison.com/calendar/
+https://high-noon.com/calendar/
+https://madisonorpheum.com/calendar/
+
+# The Barrymore (2090 Atwood Ave) — WordPress + The Events Calendar. curl works ONLY with a
+# full Chrome UA string; its /events/?ical=1 feed contains just recurring slots, use the HTML page.
+https://barrymorelive.com/events/
+
+# Fitchburg city site is a JS-only shell (114-byte body) — unusable by the crawler as of Sep 2026.
+# Park/recreation events there still surface via the other roundups; add a real calendar URL when found.
+# https://cityoffitchburg.com/government/departments/parks-recreation/events
+
+# The North Street Cabaret (jazz/live-music bar, 610 North St — far north side, ~10.4 mi;
+# user-requested source, ALWAYS INCLUDE per venues.json note).
+# Squarespace: curl the ?format=json URL — parse the "upcoming" array (title + startDate = ms epoch).
+# GOTCHA: location/mapLat in that feed is a placeholder (NYC) — IGNORE it; every event is at the venue.
+https://www.northstreetcabaret.com/events?format=json
+
+# Leopold's Bookstore (book talks, storytimes, wine classes, music — 1301 Regent St, ~6.5 mi).
+# The store page https://www.leopoldsmadison.com/events just embeds a JS Tockify widget (iframe 403s);
+# hit the Tockify calendar directly — curl works: HTML carries an application/ld+json block of
+# @type Event items (ISO startDate/endDate, location 1301 Regent St).
+# DOMAIN TRAP: leopolds.com is Leopold's ICE CREAM, not the bookstore (and is down anyway).
+https://tockify.com/leopoldsmadison
+
+# Bailey's Run Vineyard & Winery (N8523 Klitzke Rd, New Glarus — ~15.4 mi): weekends full of live
+# music, plus wine pairings/Oktoberfest/Trunk-or-Treat. Single-venue source — use venues.json coords.
+# TRAP: /events is a SOFT 404 (HTTP 200, 285KB, but <title>Page not found). The REAL page is the
+# long Town-builder path below. Server-rendered — no JSON-LD, no browser fallback. Parse: div.day-card
+# [data-date="YYYY-MM-DD"] then <span class="ev-time">/<span class="ev-title"> pairs. (class="event-title"
+# does NOT exist — dead selector, verified 2026-09-05. Descriptions live in card h2 + .event-day blocks.)
+https://baileysrunvineyard.com/new-glarus-new-glarus-bailey-s-run-vineyard-and-winery-events
+
+# showmeshows.com — Madison/Dane County live-music aggregator ("every venue, every night"). The
+# master net for local bands incl. Mark's band-watch list (Dawg Bones, Jimmies — see job prompt).
+# curl works. Homepage lists the NEXT 7 DAYS only; extract from event hrefs
+# /madison/events/<band>-at-<venue>-<YYYY-MM-DD>-<id> (slug = band + venue + date). No JSON-LD on
+# the homepage; per-event pages have MusicEvent LD if times/details are needed. Unknown routes =
+# honest 404.
+https://showmeshows.com/madison
+

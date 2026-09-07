@@ -1,0 +1,43 @@
+{
+  "channel_names": {
+    "PaulJLipsky": "Paul J. Lipsky",
+    "Bijanbowen": "Bijan Bowen",
+    "aiDotEngineer": "AI Engineer",
+    "JeffGeerling": "Jeff Geerling",
+    "joycejetson": "Joyce Jetson",
+    "LowLevelTV": "Low Level TV",
+    "MiloMilasAIDaily": "Milo Milas (AI Daily)",
+    "NetworkChuck": "NetworkChuck",
+    "TechWithTim": "Tech With Tim",
+    "TinaHuang1": "Tina Huang",
+    "mreflow": "mreflow",
+    "repochad": "Repo Chad",
+    "AZisk": "AZisk",
+    "Protorikis": "Protorikis"
+  },
+  "lookback_days": 4,
+  "max_videos_per_channel": 12,
+  "shorts_per_channel": 6,
+  "max_transcripts": 12,
+  "livestream_vod_min_duration": 5400,
+  "machines": {
+    "ZenithCore": {
+      "desc": "RTX 5080 16GB GDDR7 (~960GB/s) + 32GB system RAM, Ubuntu",
+      "vram_gb": 16,
+      "sys_ram_gb": 32,
+      "bandwidth_gbs": 960,
+      "unified": false
+    },
+    "Proton": {
+      "desc": "NVIDIA DGX Spark, GB10, 128GB unified LPDDR5x (~273GB/s)",
+      "vram_gb": 128,
+      "sys_ram_gb": 128,
+      "bandwidth_gbs": 273,
+      "unified": true
+    }
+  },
+  "email": {
+    "to": "YOU@example.com",
+    "subject_prefix": "AI News & Walkthroughs"
+  }
+}

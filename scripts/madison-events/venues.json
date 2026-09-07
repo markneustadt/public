@@ -1,0 +1,28 @@
+{
+  "_comment": "Verified venue coordinates for the events job (census geocoder + find-nearby, Sept 2026). miles = from your home. Check this file BEFORE geocoding.",
+  "venues": {
+    "Memorial Union Terrace": {"lat": 43.075894, "lon": -89.398978, "miles": 7.2, "addr": "800 Langdon St, Madison"},
+    "Library Mall": {"lat": 43.074994, "lon": -89.397915, "miles": 7.2, "addr": "728 State St, Madison"},
+    "Majestic Theatre": {"lat": 43.074585, "lon": -89.380915, "miles": 7.8, "addr": "115 King St, Madison"},
+    "UW Arboretum Visitor Center": {"lat": 43.038785, "lon": -89.443302, "miles": 3.8, "addr": "1207 Seminole Hwy, Madison"},
+    "The Edgewater": {"lat": 43.078852, "lon": -89.389538, "miles": 7.7, "addr": "1001 Wisconsin Pl, Madison"},
+    "Monroe Street (First Friday)": {"lat": 43.059788, "lon": -89.424863, "miles": 5.5, "addr": "2329 Monroe St, Madison"},
+    "Heartland Studio / The Filt": {"lat": 43.016737, "lon": -89.423122, "miles": 4.2, "addr": "2916 Cahill Main, Fitchburg"},
+    "Wisconsin State Capitol": {"lat": 43.074700, "lon": -89.385600, "miles": 7.6, "addr": "Capitol Square, Madison", "note": "approx"},
+    "The Brass Ring": {"lat": 43.079741, "lon": -89.376763, "miles": 8.2, "addr": "701 E Washington Ave, Madison"},
+    "The Sylvee": {"lat": 43.059004, "lon": -89.400577, "miles": 6.4, "addr": "800 S Park St, Madison"},
+    "High Noon Saloon": {"lat": 43.079741, "lon": -89.376763, "miles": 8.2, "addr": "701 E Washington Ave, Madison", "note": "same building as The Brass Ring"},
+    "Orpheum Theater": {"lat": 43.074801, "lon": -89.388387, "miles": 7.5, "addr": "216 State St, Madison"},
+    "The Barrymore": {"lat": 43.092695, "lon": -89.352299, "miles": 9.7, "addr": "2090 Atwood Ave, Madison"},
+    "The North Street Cabaret": {"lat": 43.107320, "lon": -89.351326, "miles": 10.4, "addr": "610 North St, Madison", "note": "Far north side — verified via census geocoder + OSM venue node + published listings; NOT at North & Langdon. Its Squarespace feed location data is a bogus NYC placeholder; always use these coords."},
+    "Leopold's Bookstore": {"lat": 43.067680, "lon": -89.407404, "miles": 6.5, "addr": "1301 Regent St, Madison", "note": "Leopold's Books Bar Caffe (Regent St store) per its Tockify feed; events there are hosted by https://tockify.com/leopoldsmadison"},
+    "Bailey's Run Vineyard & Winery": {"lat": 42.813626, "lon": -89.657265, "miles": 15.4, "addr": "N8523 Klitzke Rd, New Glarus", "note": "Exact TIGER match on the venue's own rural-route address (southwest of New Glarus village proper). Source: baileysrunvineyard.com events page."},
+    "Lake Louie Brewing / Wisconsin Brewing Co": {"lat": 42.969408, "lon": -89.511194, "miles": 2.6, "addr": "1079 American Way, Verona", "note": "Twin-brewery venue in Verona (verified via showmeshows MusicEvent LD). Very close to home."}
+  },
+  "hints": {
+    "Prairie Moraine County Park": "Dane County park between Vermont and Montrose, trailhead off County Rd M south of Hwy 92 — census geocoder fails on this address; use approx 43.000,-89.565 (~3.5 mi). It is NOT in Waunakee.",
+    "Olin Park": "1501 Olin Point Rd, Monona — on Lake Monona's west shore, approx 43.0400,-89.3480 (~7 mi).",
+    "Goodman Park": "1010 Dudgeon St, Madison — Dudgeon-Monroe neighborhood, approx 43.0638,-89.4135 (~4.9 mi).",
+    "Alliant Energy Center": "1 Alliant Center, Madison — near Traux Air Regional airport, approx 43.0580,-89.3660 (~7.3 mi)."
+  }
+}

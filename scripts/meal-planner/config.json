@@ -1,0 +1,32 @@
+{
+  "household": "3-4 people (dinner sized for 4; leftovers welcome)",
+  "cooking_effort": "medium - some from-scratch is fine, mix of quick weeknight and weekend projects",
+  "budget": "moderate - standard grocery prices, name brands or store brands both fine",
+  "email_to": "YOU@example.com",
+  "send_email_helper": "/home/mark/.hermes/scripts/ai-newsletter/send_email.py",
+  "diet_rules": {
+    "avoid": [
+      "mushrooms in any whole/sliced form (canned cream of mushroom soup is acceptable ONLY in cooked casserole-type dishes)",
+      "stone fruits: peaches, nectarines, plums, apricots, cherries (treat mango as stone fruit - drupe)",
+      "tree nuts: almonds, cashews, walnuts, pecans, pistachios, hazelnuts, macadamia (watch 'may contain tree nuts' in packaged sauces/granolas)"
+    ],
+    "notes": "Peanuts not excluded by user but flag peanut items if substituting for tree-nut recipes. Oats/granola bars: verify no tree-nut ingredients."
+  },
+  "plan_shape": {
+    "days": 7,
+    "structure": "each day = 1 main + 1-2 sides; rotate proteins (beef, poultry, pork, fish, 1-2 vegetarian); variety of cuisines; repeat no main protein+style within the week",
+    "sides_rule": "sides should work across mains (e.g. one bag of salad greens spanning 2 days) to keep the shopping list sane"
+  },
+  "aisle_order": [
+    "Produce",
+    "Meat & Seafood",
+    "Dairy & Eggs",
+    "Bakery & Deli",
+    "Canned & Jarred Goods",
+    "Pasta, Rice & Grains",
+    "Baking & Spices",
+    "Condiments & Oils",
+    "Frozen",
+    "Household"
+  ]
+}

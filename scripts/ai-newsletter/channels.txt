@@ -1,0 +1,16 @@
+# AI YouTube newsletter — tracked channels (one @handle per line, # = comment)
+# Names in config.json map handles -> display names.
+@PaulJLipsky
+@Bijanbowen
+@aiDotEngineer
+@JeffGeerling
+@joycejetson
+@LowLevelTV
+@MiloMilasAIDaily
+@NetworkChuck
+@TechWithTim
+@TinaHuang1
+@mreflow
+@repochad
+@AZisk
+@Protorikis

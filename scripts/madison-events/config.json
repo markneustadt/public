@@ -1,0 +1,11 @@
+{
+  "home": {
+    "address": "YOUR ADDRESS",
+    "lat": 0.0,
+    "lon": 0.0
+  },
+  "radius_miles": 25,
+  "window_days": 3,
+  "state_file": "state.json",
+  "geocoder": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address={ADDR_URL}&benchmark=Public_AR_Current&format=json"
+}
